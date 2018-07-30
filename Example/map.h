@@ -4,11 +4,6 @@
 #include "../Source/generic_map.h"
 
 define_map_h(SSMap, const char*, const char*)
-
-#define SNAKE_CASE
-
-define_map_h(si_map, const char*, int)
-
-#undef SNAKE_CASE
+define_map_h(SIMap, const char*, int)
 
 #endif
