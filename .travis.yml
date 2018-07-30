@@ -1,0 +1,10 @@
+language: c
+
+before_script:
+  - mkdir Build
+  - cd Build
+  - cmake ..
+  - cmake --build .
+
+script:
+  - ctest -C Debug
