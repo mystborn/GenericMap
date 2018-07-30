@@ -58,8 +58,8 @@ The macros define the following functions to use the maps.
 | --- | --- | --- |
 | \<typeName>Init(\<typeName>\* map) | Initializes the data needed for the map. Returns the result of `calloc` used to initialize the data buffer. | void \* |
 | \<typeName>Free(\<typeName>\* map) | Frees the data used by the map. Does not free the map itself. | void |
-| \<typeName>Add(\<typeName>\* map, \<keyType> key, <valueType> value) | Adds the key and value to the map. Returns false if the key has already been added. | bool |
-| \<typeName>Set(\<typeName>\* map, \<keyType> key, <valueType> value) | Adds the key and value to the map. Overwrites the previous value if the key has already been added. | void |
+| \<typeName>Add(\<typeName>\* map, \<keyType> key, \<valueType> value) | Adds the key and value to the map. Returns false if the key has already been added. | bool |
+| \<typeName>Set(\<typeName>\* map, \<keyType> key, \<valueType> value) | Adds the key and value to the map. Overwrites the previous value if the key has already been added. | void |
 | \<typeName>Get(\<typeName>\* map, \<keyType> key) | Gets the value associated with the specified key. Returns `defaultValue` if the key isn't found. | <valueType> |
 | \<typeName>Remove(\<typeName>\* map, \<keyType> key) | Removes the key and the associated value from the map. Returns false if the key wasn't found. | bool |
 
