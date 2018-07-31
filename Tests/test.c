@@ -78,13 +78,13 @@ START_TEST(test_header_map_resize) {
     SSMapAdd(&temp, "b", "b");
     SSMapAdd(&temp, "c", "c");
     SSMapAdd(&temp, "d", "d");
+    ck_assert(temp.loadFactor == 4);
+    ck_assert(temp.capacity == 8);
     SSMapAdd(&temp, "e", "e");
-    SSMapAdd(&temp, "f", "f");
-    ck_assert(temp.loadFactor == 6);
-    ck_assert(temp.capacity == 11);
-    SSMapAdd(&temp, "g", "g");
-    ck_assert(temp.loadFactor == 11);
-    ck_assert(temp.capacity == 23);
+    ck_assert(temp.loadFactor == 8);
+    ck_assert(temp.capacity == 16);
+    ck_assert(SSMapGet(&temp, "a") != NULL);
+    ck_assert(SSMapGet(&temp, "b") != NULL);
     SSMapFree(&temp);
 }
 END_TEST
