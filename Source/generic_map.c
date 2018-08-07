@@ -6,7 +6,7 @@
 // The specific constant was found here:
 // http://book.huihoo.com/data-structures-and-algorithms-with-object-oriented-design-patterns-in-c++/html/page214.html
 
-#define HASH_CONSTANT 2654435769u
+#define HASH_CONSTANT 2654435769
 
 uint32_t fibHash(uint32_t hash, uint32_t shift) {
     return (hash * HASH_CONSTANT) >> shift;

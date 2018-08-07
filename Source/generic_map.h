@@ -10,10 +10,10 @@ uint32_t fibHash(uint32_t hash, uint32_t shift);
 
 #define define_map_h(typeName, keyType, valueType) \
     typedef struct { \
-        bool active; \
+        uint32_t hash; \
         keyType key; \
         valueType value; \
-        uint32_t hash; \
+        bool active; \
     } typeName ## _Cell_; \
     \
     typedef struct { \
