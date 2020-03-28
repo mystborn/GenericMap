@@ -55,7 +55,7 @@ uint32_t fibHash(uint32_t hash, uint32_t shift);
                 uint32_t cell; \
                 old[i].hash = cell = fibHash(hashFn(old[i].key), map->shift); \
                 while(new[cell].active) { \
-                    if(++cell > map->capacity) \
+                    if(++cell >= map->capacity) \
                         cell = 0; \
                 } \
                 new[cell] = old[i]; \
